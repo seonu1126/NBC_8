@@ -87,12 +87,10 @@ private:
 	ASpartaPlayerController* GetSpartaPlayerController() const;
 	USpartaGameInstance* GetSpartaGameInstance() const;
 	
-	// 아이템 수집 시 보상 추가 함수
+	// 코인먹으면 이벤트발생시키기
 	void OnCoinCollected()
 	{
 		CollectedCoinCount++;
-		AddScore(10); // 코인 1개 수집 시 10점 추가
-
-		// 수집한 후 추가적인 로직을 넣을 수도 있습니다.
+		AddScore(10); // 코인 1개 = 10점 추가
 	}
 };
